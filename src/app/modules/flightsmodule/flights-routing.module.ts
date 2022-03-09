@@ -4,8 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FlightBookingComponent } from './components/flight-booking/flight-booking.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'flights'},
-  {path: 'flights', component: FlightBookingComponent},
+  {path: '', component: FlightBookingComponent},
 ];
 
 @NgModule({

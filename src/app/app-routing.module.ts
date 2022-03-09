@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '/', component: AppComponent,
+  { path: '', component: AppComponent,
     children: [
       {
         path: 'flights',
@@ -26,19 +26,15 @@ const routes: Routes = [
         path: 'activity',
         loadChildren: () => import('./modules/activitymodule/activity.module').then(mod => mod.ActivityModule),
         data: { title: 'Activity' },
-      },
-      { path: '**', component: PageNotFoundComponent },
+      }
     ]
-}
+},
+{ path: '**', component: PageNotFoundComponent },
 ];
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
