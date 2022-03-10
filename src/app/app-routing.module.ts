@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent,
+  { path: '',
     children: [
       {
         path: 'flights',
